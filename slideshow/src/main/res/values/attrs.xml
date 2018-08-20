@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr format="reference" name="vpiCirclePageIndicatorStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyCirclePageIndicator">
+        <attr format="boolean" name="centered"/>
+        <attr format="color" name="fillColor"/>
+        <attr format="color" name="pageColor"/>
+        <attr name="android:orientation"/>
+        <attr format="dimension" name="radius"/>
+        <attr format="boolean" name="snap"/>
+        <attr format="color" name="strokeColor"/>
+        <attr format="dimension" name="pageIndicatorStrokeWidth"/>
+        <attr name="android:background"/>
+    </declare-styleable>
+</resources>
