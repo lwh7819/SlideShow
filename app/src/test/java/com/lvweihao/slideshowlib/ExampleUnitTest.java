@@ -1,4 +1,4 @@
-package com.lvweihao.slideshow;
+package com.lvweihao.slideshowlib;
 
 import org.junit.Test;
 

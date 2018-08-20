@@ -1,4 +1,4 @@
-package com.lvweihao.slideshow;
+package com.lvweihao.slideshowlib;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import com.lvweihao.slideshow.BasePagerAdapter;
+import com.lvweihao.slideshowlib.R;
 
 import java.util.ArrayList;
 

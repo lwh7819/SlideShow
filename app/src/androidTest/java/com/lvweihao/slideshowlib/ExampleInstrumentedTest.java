@@ -1,4 +1,4 @@
-package com.lvweihao.slideshow;
+package com.lvweihao.slideshowlib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

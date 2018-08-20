@@ -110,10 +110,9 @@ public abstract class BasePagerAdapter<T> extends PagerAdapter implements ViewPa
         }
     };
 
-    public Handler startInterval(int delayedMillisSecond) {
+    public void startInterval(int delayedMillisSecond) {
         this.delayTime = delayedMillisSecond;
         handler.sendEmptyMessageDelayed(TIMER, delayedMillisSecond);
-        return handler;
     }
 
     public void onDestory() {

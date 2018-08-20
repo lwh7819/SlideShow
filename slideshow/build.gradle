@@ -3,14 +3,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/lwh7819/DialViewDemo'    // Git项目主页
-def gitUrl = 'https://github.com/lwh7819/DialViewDemo.git' // Git仓库url
+def siteUrl = 'https://github.com/lwh7819/SlideShow'    // Git项目主页
+def gitUrl = 'https://github.com/lwh7819/SlideShow.git' // Git仓库url
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-version = "1.0.3" //发布版本号
-group = "com.lwh.dialView" //最终引用形式，如compile 'com.voctex.banner:banner:1.0.0'，其中banner在后面配置
+version = "1.0.1" //发布版本号
+group = "com.lwh.slideshow" //最终引用形式，如compile 'com.voctex.banner:banner:1.0.0'，其中banner在后面配置
 
 android {
     compileSdkVersion 26
@@ -23,7 +23,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -37,7 +36,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0+'
+    implementation 'com.android.support:appcompat-v7:26.+'
 }
 
 bintray {
@@ -45,7 +44,7 @@ bintray {
     key = properties.getProperty("bintray.apikey")
     pkg {
         repo = 'maven'//自己创建的仓库名字，要跟Bintray上创建的仓库一样
-        name = 'dialView'//上传到JCenter的名字,最终引用的名字
+        name = 'slideshow'//上传到JCenter的名字,最终引用的名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl //这个好像是必须的，我尝试过传空字符串好像是不成功的
         licenses = ['MIT']//不能随便写，只能是仓库创建时选择的license type
@@ -53,10 +52,10 @@ bintray {
         publish = true // 是否是公开项目，公开别人可以引用
 
         version {
-            name = '1.0.3'//版本名，上面好像已经有配置了
-            desc = 'dialview open library.'//描述，自己定义
+            name = '1.0.1'//版本名，上面好像已经有配置了
+            desc = 'slideshow open library.'//描述，自己定义
             released  = new Date()
-            vcsTag = 'v1.0.3'
+            vcsTag = 'v1.0.1'
             attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
@@ -71,7 +70,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'Android DialView'//项目名
+                name 'Android SlideShow'//项目名
                 description 'open library.'//项目描述
                 url siteUrl
                 // Set your license
